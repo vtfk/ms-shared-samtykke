@@ -1,0 +1,17 @@
+{
+  "name": "ms-shared-samtykke",
+  "alias": [
+    "samtykke.service.vtfk.no"
+  ],
+  "env": {
+    "NODE_ENV": "production",
+    "MONGODB_CONNECTION": "@db-felles-connection",
+    "MONGODB_COLLECTION": "samtykke"
+  },
+  "builds": [
+    { "src": "/index.js", "use": "@now/node" }
+  ],
+  "routes": [
+    { "src": "/(.*)", "dest": "/index.js" }
+  ]
+}
