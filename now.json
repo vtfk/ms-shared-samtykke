@@ -1,4 +1,5 @@
 {
+  "version": 2,
   "name": "ms-shared-samtykke",
   "alias": [
     "samtykker.api.minelev.no"
