@@ -21,6 +21,7 @@ router.use(auth)
 // ROUTES
 router.get('/docs', handlers.frontpage)
 router.get('/', handleSamtykker.getSamtykker)
+router.get('/favicon.ico', handlers.favicon)
 router.put('/', handleSamtykker.addSamtykke)
 router.get('/:id', handleSamtykker.getSamtykke)
 router.post('/:id', handleSamtykker.updateSamtykke)
