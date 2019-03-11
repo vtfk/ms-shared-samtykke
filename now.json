@@ -1,7 +1,7 @@
 {
   "name": "ms-shared-samtykke",
   "alias": [
-    "samtykke.service.vtfk.no"
+    "samtykke.api.minelev.no"
   ],
   "env": {
     "NODE_ENV": "production",

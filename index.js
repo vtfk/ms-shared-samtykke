@@ -2,7 +2,7 @@
 const Router = require('router')
 const finalhandler = require('finalhandler')
 const cors = require('cors')
-const whitelist = ['/', '/favicon.ico']
+const whitelist = ['/docs', '/favicon.ico']
 const auth = require('./lib/token-auth')(whitelist)
 
 // Handlers
@@ -19,10 +19,11 @@ router.use(cors())
 router.use(auth)
 
 // ROUTES
-router.get('/', handlers.frontpage)
-router.put('/samtykker', handleSamtykker.addSamtykke)
-router.get('/samtykker/:id', handleSamtykker.getSamtykke)
-router.post('/samtykker/:id', handleSamtykker.updateSamtykke)
+router.get('/docs', handlers.frontpage)
+router.get('/', handleSamtykker.getSamtykker)
+router.put('/', handleSamtykker.addSamtykke)
+router.get('/:id', handleSamtykker.getSamtykke)
+router.post('/:id', handleSamtykker.updateSamtykke)
 
 module.exports = (request, response) => {
   router(request, response, finalhandler(request, response))
