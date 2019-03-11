@@ -13,6 +13,6 @@ const getUrl = fn => {
 
 test('it returns README as frontpage', async t => {
   const url = await getUrl(srv)
-  const result = await axios.get(url)
+  const result = await axios.get(`${url}/docs`)
   t.true(result.data.includes('MIT'), 'frontpage ok')
 })

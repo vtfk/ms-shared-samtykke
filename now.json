@@ -5,8 +5,9 @@
   ],
   "env": {
     "NODE_ENV": "production",
-    "MONGODB_CONNECTION": "@db-felles-connection",
-    "MONGODB_COLLECTION": "samtykke"
+    "MONGODB_CONNECTION": "@db-cosmos-felles-connection",
+    "MONGODB_COLLECTION": "samtykker",
+    "MOA_TENNANT_ID": "@moa-tenant-id"
   },
   "builds": [
     { "src": "/index.js", "use": "@now/node" }
