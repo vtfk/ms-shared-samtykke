@@ -2,12 +2,12 @@
 const Router = require('router')
 const finalhandler = require('finalhandler')
 const cors = require('cors')
-const jwt = require('express-jwt')
+const whitelist = ['/', '/favicon.ico']
+const auth = require('./lib/token-auth')(whitelist)
 
-// Utilities
+// Handlers
 const handlers = require('./lib/handlers')
 const handleSamtykker = require('./lib/handle-samtykker')
-const handleUnauthorized = require('./lib/handle-unauthorized')
 
 // Initialize a new router
 const router = Router()
@@ -15,11 +15,8 @@ const router = Router()
 // CORS
 router.use(cors())
 
-// JWT
-if (process.env.JWT_SECRET) {
-  router.use(jwt({ secret: process.env.JWT_SECRET }).unless({ path: ['/'] }))
-  router.use(handleUnauthorized)
-}
+// AUTH
+router.use(auth)
 
 // ROUTES
 router.get('/', handlers.frontpage)
