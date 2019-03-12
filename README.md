@@ -43,6 +43,10 @@ MOA_TENANT_ID=your-azure-tennant
 JWT_SECRET=jwt-secret-for-machine-to-machine
 ```
 
+## Related
+
+- [web-vgo-minelev-portal](https://github.com/vtfk/web-vgo-minelev-portal) Frontend for samtykker
+
 ## License
 
 [MIT](LICENSE)
