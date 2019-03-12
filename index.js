@@ -9,6 +9,7 @@ const auth = require('./lib/token-auth')(whitelist)
 // Handlers
 const handlers = require('./lib/handlers')
 const handleSamtykker = require('./lib/handle-samtykker')
+const handleUnauthorized = require('./lib/handle-unauthorized')
 
 // Initialize a new router
 const router = Router()
