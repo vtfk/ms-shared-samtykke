@@ -3,7 +3,7 @@ const Router = require('router')
 const finalhandler = require('finalhandler')
 const cors = require('cors')
 const jwt = require('express-jwt')
-const whitelist = ['/docs', '/favicon.ico']
+const whitelist = ['/docs', '/favicon.ico', '/samtykker']
 const auth = require('./lib/token-auth')(whitelist)
 
 // Handlers
@@ -22,7 +22,7 @@ router.use(auth)
 
 // JWT
 if (process.env.JWT_SECRET) {
-  router.use(jwt({ secret: process.env.JWT_SECRET }).unless({ path: ['/docs'] }))
+  router.use(jwt({ secret: process.env.JWT_SECRET }).unless({ path: '/samtykker$' }))
   router.use(handleUnauthorized)
 }
 
@@ -31,6 +31,7 @@ router.get('/docs', handlers.frontpage)
 router.get('/', handleSamtykker.getSamtykker)
 router.get('/favicon.ico', handlers.favicon)
 router.put('/', handleSamtykker.addSamtykke)
+router.post('/samtykker', handleSamtykker.getSamtykkerForUserIds)
 router.get('/:id', handleSamtykker.getSamtykke)
 router.post('/:id', handleSamtykker.updateSamtykke)
 

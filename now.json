@@ -8,7 +8,8 @@
     "NODE_ENV": "production",
     "MONGODB_CONNECTION": "@db-cosmos-felles-connection",
     "MONGODB_COLLECTION": "samtykker",
-    "MOA_TENANT_ID": "@moa-tenant-id"
+    "MOA_TENANT_ID": "@moa-tenant-id",
+    "JWT_SECRET": "@minelev-jwt-secret"
   },
   "builds": [
     { "src": "/index.js", "use": "@now/node" }

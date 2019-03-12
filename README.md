@@ -22,6 +22,16 @@ Retrieves a given samtykke for authenticated user
 
 Updates state for a given samtykke for authenticated user
 
+### ```POST /samtykker```
+
+Retrieve samtykker for given userIds
+
+```JavaScript
+{
+  userIds: ['maccyber', 'Sherex', 'zrrrzzt']
+}
+```
+
 ## Deployment
 
 Environment
@@ -30,6 +40,7 @@ Environment
 MONGODB_CONNECTION=your-mongodb-connection-string
 MONGODB_COLLECTION=samtykker
 MOA_TENANT_ID=your-azure-tennant
+JWT_SECRET=jwt-secret-for-machine-to-machine
 ```
 
 ## License
