@@ -2,6 +2,7 @@
 const Router = require('router')
 const finalhandler = require('finalhandler')
 const cors = require('cors')
+const jwt = require('express-jwt')
 const whitelist = ['/docs', '/favicon.ico']
 const auth = require('./lib/token-auth')(whitelist)
 
@@ -17,6 +18,12 @@ router.use(cors())
 
 // AUTH
 router.use(auth)
+
+// JWT
+if (process.env.JWT_SECRET) {
+  router.use(jwt({ secret: process.env.JWT_SECRET }).unless({ path: ['/docs'] }))
+  router.use(handleUnauthorized)
+}
 
 // ROUTES
 router.get('/docs', handlers.frontpage)
