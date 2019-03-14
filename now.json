@@ -6,7 +6,7 @@
   ],
   "env": {
     "NODE_ENV": "production",
-    "MONGODB_CONNECTION": "@db-cosmos-felles-connection",
+    "MONGODB_CONNECTION": "@db-cosmos-minelev-connection",
     "MONGODB_COLLECTION": "samtykker",
     "MOA_TENANT_ID": "@moa-tenant-id",
     "JWT_SECRET": "@minelev-jwt-secret"
