@@ -14,9 +14,22 @@
     "JWT_SECRET": "@minelev-jwt-secret"
   },
   "builds": [
-    { "src": "/index.js", "use": "@now/node" }
+    { 
+      "src": "/index.js",
+      "use": "@now/node" 
+    },
+    {
+      "src": "*.md",
+      "use": "@now/md"
+    }
   ],
   "routes": [
+    { "src": "/docs",
+      "dest": "/README.html"
+    },
+    { "src": "/favicon.ico",
+      "dest": "/static/favicon.ico"
+    },
     { "src": "/(.*)", "dest": "/index.js" }
   ]
 }

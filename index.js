@@ -7,7 +7,6 @@ const machinelist = ['/samtykker']
 const auth = require('./lib/token-auth')(whitelist, machinelist)
 
 // Handlers
-const handlers = require('./lib/handlers')
 const handleSamtykker = require('./lib/handle-samtykker')
 
 // Initialize a new router
@@ -20,9 +19,7 @@ router.use(cors())
 router.use(auth)
 
 // ROUTES
-router.get('/docs', handlers.frontpage)
 router.get('/', handleSamtykker.getSamtykker)
-router.get('/favicon.ico', handlers.favicon)
 router.put('/', handleSamtykker.addSamtykke)
 router.post('/samtykker', handleSamtykker.getSamtykkerForUserIds)
 router.get('/:id', handleSamtykker.getSamtykke)
