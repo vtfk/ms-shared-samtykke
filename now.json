@@ -11,7 +11,10 @@
     "MONGODB_COLLECTION": "samtykker",
     "MONGODB_NAME": "minelev",
     "MOA_TENANT_ID": "@moa-tenant-id",
-    "JWT_SECRET": "@minelev-jwt-secret"
+    "JWT_SECRET": "@minelev-jwt-secret",
+    "PAPERTRAIL_HOST": "@tfk-papertrail-host",
+    "PAPERTRAIL_PORT": "@tfk-papertrail-port",
+    "PAPERTRAIL_HOSTNAME": "elevpc"
   },
   "builds": [
     { 

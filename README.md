@@ -45,6 +45,9 @@ MONGODB_COLLECTION=samtykker
 MONGODB_NAME=minelev
 MOA_TENANT_ID=your-azure-tennant
 JWT_SECRET=jwt-secret-for-machine-to-machine
+PAPERTRAIL_HOST=logs.papertrailapp.com
+PAPERTRAIL_PORT=12345
+PAPERTRAIL_HOSTNAME=elevpc
 ```
 
 ## Related
