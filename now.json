@@ -1,6 +1,7 @@
 {
   "version": 2,
   "name": "ms-shared-samtykke",
+  "scope": "minelev",
   "alias": [
     "samtykker.api.minelev.no"
   ],
@@ -8,6 +9,7 @@
     "NODE_ENV": "production",
     "MONGODB_CONNECTION": "@db-cosmos-minelev-connection",
     "MONGODB_COLLECTION": "samtykker",
+    "MONGODB_NAME": "minelev",
     "MOA_TENANT_ID": "@moa-tenant-id",
     "JWT_SECRET": "@minelev-jwt-secret"
   },

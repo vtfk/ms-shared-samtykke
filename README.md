@@ -42,6 +42,7 @@ Environment
 ```
 MONGODB_CONNECTION=your-mongodb-connection-string
 MONGODB_COLLECTION=samtykker
+MONGODB_NAME=minelev
 MOA_TENANT_ID=your-azure-tennant
 JWT_SECRET=jwt-secret-for-machine-to-machine
 ```
