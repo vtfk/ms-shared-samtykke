@@ -51,7 +51,7 @@
   "dependencies": {
     "cors": "2.8.5",
     "express-jwt": "5.3.1",
-    "finalhandler": "1.1.1",
+    "finalhandler": "1.1.2",
     "jsonwebtoken": "8.5.1",
     "micro": "9.3.4",
     "mongodb": "3.2.3",
