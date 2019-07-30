@@ -3,7 +3,7 @@
 
 # ms-shared-samtykke
 
-Microservice for samtykke
+Microservice for samtykker.
 
 ## API
 
