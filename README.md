@@ -128,6 +128,69 @@ Retrieve samtykker for given userIds
 }
 ```
 
+### ```GET /stats/total```
+
+Returns the total amount of samtykker
+
+```
+$ curl http://localhost:3000/stats/total
+```
+
+```JavaScript
+{
+  total: 5494
+}
+```
+
+### ```GET /stats/signed```
+
+Returns the total amount of signed samtykker
+
+```
+$ curl http://localhost:3000/stats/signed
+```
+
+```JavaScript
+{
+  total: 2008
+}
+```
+
+### ```GET /stats/declined```
+
+Returns the total amount of declined samtykker
+
+```
+$ curl http://localhost:3000/stats/declined
+```
+
+```JavaScript
+{
+  total: 3486
+}
+```
+
+## Development
+
+Add a local `.env` file
+
+```
+MONGODB_CONNECTION=your-mongodb-connection-string
+MONGODB_COLLECTION=samtykker
+MONGODB_NAME=minelev
+MOA_TENANT_ID=your-azure-tennant
+JWT_SECRET=jwt-secret-for-machine-to-machine
+PAPERTRAIL_HOST=logs.papertrailapp.com
+PAPERTRAIL_PORT=12345
+PAPERTRAIL_HOSTNAME=elevpc
+```
+
+Start the development environment
+
+```
+$ now dev
+```
+
 ## Deployment
 
 Environment

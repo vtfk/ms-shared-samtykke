@@ -17,6 +17,10 @@
     "PAPERTRAIL_HOSTNAME": "elevpc"
   },
   "builds": [
+    {
+      "src": "/api/*.js",
+      "use": "@now/node"
+    },
     { 
       "src": "/index.js",
       "use": "@now/node" 
@@ -33,7 +37,22 @@
     { "src": "/favicon.ico",
       "dest": "/static/favicon.ico"
     },
-    { "src": "/(.*)", "dest": "/index.js" }
+    {
+      "src": "/stats/total",
+      "dest": "/api/stats-total.js"
+    },
+    {
+      "src": "/stats/signed",
+      "dest": "/api/stats-signed.js"
+    },
+    {
+      "src": "/stats/declined",
+      "dest": "/api/stats-declined.js"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/index.js"
+    }
   ],
   "engines": {
     "node": ">= 10.16.0"
