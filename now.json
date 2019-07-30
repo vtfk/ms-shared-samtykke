@@ -34,5 +34,8 @@
       "dest": "/static/favicon.ico"
     },
     { "src": "/(.*)", "dest": "/index.js" }
-  ]
+  ],
+  "engines": {
+    "node": ">= 10.16.0"
+  }
 }
