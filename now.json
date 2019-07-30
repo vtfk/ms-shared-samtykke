@@ -39,15 +39,27 @@
     },
     {
       "src": "/stats/total",
-      "dest": "/api/stats-total.js"
+      "dest": "/api/stats-total.js",
+      "headers": {
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept"
+      }
     },
     {
       "src": "/stats/signed",
-      "dest": "/api/stats-signed.js"
+      "dest": "/api/stats-signed.js",
+      "headers": {
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept"
+      }
     },
     {
       "src": "/stats/declined",
-      "dest": "/api/stats-declined.js"
+      "dest": "/api/stats-declined.js",
+      "headers": {
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept"
+      }
     },
     {
       "src": "/(.*)",
