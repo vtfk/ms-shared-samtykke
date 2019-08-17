@@ -10,7 +10,7 @@
     "MONGODB_CONNECTION": "@db-cosmos-prod-connection",
     "MONGODB_COLLECTION": "samtykker",
     "MONGODB_NAME": "minelev",
-    "MOA_TENANT_ID": "@moa-tenant-id",
+    "MOA_TENANT_ID": "@moa-tenant-id-vtfk",
     "JWT_SECRET": "@minelev-jwt-secret",
     "PAPERTRAIL_HOST": "@tfk-papertrail-host",
     "PAPERTRAIL_PORT": "@tfk-papertrail-port",
